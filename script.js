@@ -1,15 +1,14 @@
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contact-form');
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('form-contato');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-
-        const name = document.getElementById('name').value;
+        const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const mensagem = document.getElementById('mensagem').value;
 
-        if (name && email && message) {
+        if (nome && email && mensagem) {
             alert('Mensagem enviada com sucesso!');
             form.reset();
         } else {
